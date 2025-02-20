@@ -1,24 +1,36 @@
+/* Estilos globais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
-    background-color: #ffdde1;
+    background: url('https://source.unsplash.com/1600x900/?love,couple') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    margin-top: 50px;
+    margin-top: 100px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Fundo transparente para melhorar o contraste */
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h1 {
-    font-size: 24px;
-    color: #ff4b5c;
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff4b5c;  /* Cor suave de vermelho */
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 #countdown {
-    font-size: 32px;
+    font-size: 48px;
     font-weight: bold;
-    color: #ff4b5c;
+    color: #fff;
     margin-bottom: 20px;
 }
 
@@ -26,7 +38,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 button {
@@ -37,6 +49,12 @@ button {
     font-size: 20px;
     cursor: pointer;
     margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff1f3d;
 }
 
 img {
@@ -44,6 +62,7 @@ img {
     height: 400px;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
 }
 
 .music-controls {
@@ -59,4 +78,13 @@ iframe {
     width: 100%;
     max-width: 500px;
     height: 280px;
+}
+
+#prev, #next {
+    font-size: 30px;
+    color: white;
+}
+
+#prev:hover, #next:hover {
+    color: #ff4b5c;
 }
