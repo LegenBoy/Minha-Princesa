@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Você ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Faltam apenas...</h1>
+        <div id="countdown">
+            <span id="days"></span>d : 
+            <span id="hours"></span>h : 
+            <span id="minutes"></span>m : 
+            <span id="seconds"></span>s
+        </div>
+
+        <h2>Nossos Momentos Juntos</h2>
+        <div class="carousel">
+            <button id="prev">&lt;</button>
+            <img id="carousel-img" src="img1.jpg" alt="Foto do casal">
+            <button id="next">&gt;</button>
+        </div>
+
+        <h2>Escute nossa música</h2>
+        <!-- Player do YouTube com controles de play/pause -->
+        <iframe id="youtube-player" width="300" height="170" 
+            src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=0&loop=1&playlist=2Vv-BfVoq4g" 
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+
+        <div class="music-controls">
+            <button id="play-music">🎵 Tocar Música</button>
+            <button id="pause-music">⏸️ Pausar Música</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

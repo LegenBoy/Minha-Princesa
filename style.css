@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffdde1;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff4b5c;
+}
+
+#countdown {
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff4b5c;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+img {
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.music-controls {
+    margin-top: 20px;
+}
+
+iframe {
+    margin-top: 20px;
+    border-radius: 12px;
+}
+
+#youtube-player {
+    width: 100%;
+    max-width: 500px;
+    height: 280px;
+}
