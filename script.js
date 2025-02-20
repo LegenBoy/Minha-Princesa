@@ -1,15 +1,16 @@
-// Configuração da data final do temporizador
-const targetDate = new Date("2025-12-25 00:00:00").getTime(); // Altere a data aqui
+// Data de início do namoro, com hora exata de 17:40
+const startDate = new Date("2024-06-23T17:40:00").getTime();  // Início do namoro com hora e minuto específicos
 
-function updateCountdown() {
-    const now = new Date().getTime();
-    const timeLeft = targetDate - now;
+function updateTime() {
+    const now = new Date().getTime();  // Hora atual
+    const timeElapsed = now - startDate;  // Diferença entre a data atual e o início do namoro
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    const days = Math.floor(timeElapsed / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeElapsed % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeElapsed % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeElapsed % (1000 * 60)) / 1000);
 
+    // Atualiza os elementos do DOM
     document.getElementById("days").innerText = days;
     document.getElementById("hours").innerText = hours;
     document.getElementById("minutes").innerText = minutes;
@@ -17,37 +18,4 @@ function updateCountdown() {
 }
 
 // Atualiza o temporizador a cada segundo
-setInterval(updateCountdown, 1000);
-
-// Configuração do carrossel de fotos
-const images = ["img1.jpg", "img2.jpg", "img3.jpg"]; // Substitua pelos nomes das suas imagens
-let currentImageIndex = 0;
-
-document.getElementById("prev").addEventListener("click", () => {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    document.getElementById("carousel-img").src = images[currentImageIndex];
-});
-
-document.getElementById("next").addEventListener("click", () => {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    document.getElementById("carousel-img").src = images[currentImageIndex];
-});
-
-// Controle da música do YouTube
-const player = document.getElementById("youtube-player");
-const playButton = document.getElementById("play-music");
-const pauseButton = document.getElementById("pause-music");
-
-playButton.addEventListener("click", () => {
-    const playerSrc = player.src;
-    if (!playerSrc.includes("autoplay=1")) {
-        player.src += "&autoplay=1";  // Inicia a música
-        playButton.innerText = "⏸️ Pausar Música";
-    }
-});
-
-pauseButton.addEventListener("click", () => {
-    const playerSrc = player.src.replace("&autoplay=1", "");  // Pausa a música
-    player.src = playerSrc;
-    playButton.innerText = "🎵 Tocar Música";
-});
+setInterval(updateTime, 1000);
